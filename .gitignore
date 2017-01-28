@@ -1,98 +1,96 @@
-*.gem
-*.rbc
-/.config
-/coverage/
-/InstalledFiles
-/pkg/
-/spec/reports/
-/spec/examples.txt
-/test/tmp/
-/test/version_tmp/
-/tmp/
-
-## Specific to RubyMotion:
-.dat*
-.repl_history
+# Two-trick pony for OSX and other case insensitive file systems:
+# Ignore ./python binary on Unix but still look into ./Python/ directory.
+/python
+!/Python/
+*.cover
+*.o
+*.orig
+*.pyc
+*.pyd
+*.pyo
+*.rej
+*.swp
+*~
+*.gc??
+*.profclang?
+*.profraw
+*.dyn
+.gdb_history
+Doc/build/
+Doc/venv/
+Lib/distutils/command/*.pdb
+Lib/lib2to3/*.pickle
+Lib/test/data/*
+Makefile
+Makefile.pre
+Misc/python.pc
+Misc/python-config.sh
+Modules/Setup
+Modules/Setup.config
+Modules/Setup.local
+Modules/config.c
+Modules/ld_so_aix
+Programs/_freeze_importlib
+Programs/_testembed
+PC/python_nt*.h
+PC/pythonnt_rc*.h
+PC/*/*.exe
+PC/*/*.exp
+PC/*/*.lib
+PC/*/*.bsc
+PC/*/*.dll
+PC/*/*.pdb
+PC/*/*.user
+PC/*/*.ncb
+PC/*/*.suo
+PC/*/Win32-temp-*
+PC/*/x64-temp-*
+PC/*/amd64
+PCbuild/*.user
+PCbuild/*.suo
+PCbuild/*.*sdf
+PCbuild/*-pgi
+PCbuild/*-pgo
+PCbuild/.vs/
+PCbuild/amd64/
+PCbuild/obj/
+PCBuild/win32/
+.purify
+Parser/pgen
+__pycache__
+autom4te.cache
 build/
-*.bridgesupport
-build-iPhoneOS/
-build-iPhoneSimulator/
-
-## Specific to RubyMotion (use of CocoaPods):
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
-# vendor/Pods/
-
-## Documentation cache and generated files:
-/.yardoc/
-/_yardoc/
-/doc/
-/rdoc/
-
-## Environment normalization:
-/.bundle/
-/vendor/bundle
-/lib/bundler/man/
-
-# for a library or gem, you might want to ignore these files since the code is
-# intended to run in multiple environments; otherwise, check them in:
-# Gemfile.lock
-# .ruby-version
-# .ruby-gemset
-
-# unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
-.rvmrc
-
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
-
-# Windows
-# =========================
-
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
-
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
+buildno
+config.cache
+config.log
+config.status
+config.status.lineno
+core
+db_home
+.hg/
+ipch/
+libpython*.a
+libpython*.so*
+libpython*.dylib
+platform
+pybuilddir.txt
+pyconfig.h
+python-config
+python-config.py
+python.bat
+python.exe
+python-gdb.py
+python.exe-gdb.py
+reflog.txt
+.svn/
+tags
+TAGS
+.coverage
+coverage/
+externals/
+htmlcov/
+Tools/msi/obj
+Tools/ssl/amd64
+Tools/ssl/win32
+.vs/
+.vscode/
