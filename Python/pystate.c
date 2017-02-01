@@ -47,7 +47,7 @@ static PyThread_type_lock head_mutex = NULL; /* Protects interp->tstate_head */
    GILState implementation
 */
 static PyInterpreterState *autoInterpreterState = NULL;
-static int autoTLSkey = -1;
+static long autoTLSkey = -1L;
 #else
 #define HEAD_INIT() /* Nothing */
 #define HEAD_LOCK() /* Nothing */

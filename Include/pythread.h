@@ -74,11 +74,11 @@ PyAPI_FUNC(PyObject*) PyThread_GetInfo(void);
 #endif
 
 /* Thread Local Storage (TLS) API */
-PyAPI_FUNC(int) PyThread_create_key(void);
-PyAPI_FUNC(void) PyThread_delete_key(int);
-PyAPI_FUNC(int) PyThread_set_key_value(int, void *);
-PyAPI_FUNC(void *) PyThread_get_key_value(int);
-PyAPI_FUNC(void) PyThread_delete_key_value(int key);
+PyAPI_FUNC(long) PyThread_create_key(void);
+PyAPI_FUNC(void) PyThread_delete_key(long);
+PyAPI_FUNC(int) PyThread_set_key_value(long, void *);
+PyAPI_FUNC(void *) PyThread_get_key_value(long);
+PyAPI_FUNC(void) PyThread_delete_key_value(long key);
 
 /* Cleanup after a fork */
 PyAPI_FUNC(void) PyThread_ReInitTLS(void);

@@ -603,36 +603,36 @@ _pythread_pthread_set_stacksize(size_t size)
 
 #define Py_HAVE_NATIVE_TLS
 
-int
+long
 PyThread_create_key(void)
 {
     pthread_key_t key;
     int fail = pthread_key_create(&key, NULL);
     if (fail)
-        return -1;
+        return -1L;
     if (key > INT_MAX) {
         /* Issue #22206: handle integer overflow */
         pthread_key_delete(key);
         errno = ENOMEM;
-        return -1;
+        return -1L;
     }
-    return (int)key;
+    return (long)key;
 }
 
 void
-PyThread_delete_key(int key)
+PyThread_delete_key(long key)
 {
     pthread_key_delete(key);
 }
 
 void
-PyThread_delete_key_value(int key)
+PyThread_delete_key_value(long key)
 {
     pthread_setspecific(key, NULL);
 }
 
 int
-PyThread_set_key_value(int key, void *value)
+PyThread_set_key_value(long key, void *value)
 {
     int fail;
     fail = pthread_setspecific(key, value);
@@ -640,7 +640,7 @@ PyThread_set_key_value(int key, void *value)
 }
 
 void *
-PyThread_get_key_value(int key)
+PyThread_get_key_value(long key)
 {
     return pthread_getspecific(key);
 }

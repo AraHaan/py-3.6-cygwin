@@ -1144,6 +1144,7 @@ if test $enable_shared = "yes"; then
   case $ac_sys_system in
     CYGWIN*)
           LDLIBRARY='libpython$(LDVERSION).dll.a'
+          BLDLIBRARY='-L. -lpython$(LDVERSION)'
           DLLLIBRARY='libpython$(LDVERSION).dll'
           ;;
     SunOS*)
@@ -4615,7 +4616,7 @@ AC_MSG_RESULT($SOABI)
 
 AC_SUBST(EXT_SUFFIX)
 case $ac_sys_system in
-    Linux*|GNU*|Darwin)
+    Linux*|GNU*|Darwin*|CYGWIN*)
 	EXT_SUFFIX=.${SOABI}${SHLIB_SUFFIX};;
     *)
 	EXT_SUFFIX=${SHLIB_SUFFIX};;

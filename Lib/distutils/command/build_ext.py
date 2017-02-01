@@ -716,9 +716,9 @@ class build_ext(Command):
             else:
                 return ext.libraries
         elif sys.platform[:6] == "cygwin":
-            template = "python%d.%d"
+            template = "python%d.%d%s"
             pythonlib = (template %
-                   (sys.hexversion >> 24, (sys.hexversion >> 16) & 0xff))
+                   (sys.hexversion >> 24, (sys.hexversion >> 16) & 0xff, sys.abiflags))
             # don't extend ext.libraries, it may be shared with other
             # extensions, it is a reference to the original list
             return ext.libraries + [pythonlib]
